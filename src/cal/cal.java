@@ -20,9 +20,7 @@ import javax.swing.SwingConstants;
 public class cal extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField t1;
-	private JTextField t2;
-	private JTextField t3;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -45,126 +43,144 @@ public class cal extends JFrame {
 	 */
 	public cal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 319);
+		setBounds(100, 100, 487, 427);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
+		contentPane.setForeground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		t1 = new JTextField();
-		t1.setHorizontalAlignment(SwingConstants.CENTER);
-		t1.setForeground(new Color(0, 0, 0));
-		t1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		t1.setBounds(139, 68, 70, 39);
-		contentPane.add(t1);
-		t1.setColumns(10);
+		JLabel lblCalculator = new JLabel("Calculator");
+		lblCalculator.setFont(new Font("Elephant", Font.PLAIN, 17));
+		lblCalculator.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCalculator.setBounds(119, 0, 168, 31);
+		contentPane.add(lblCalculator);
 		
-		JButton btnNewButton = new JButton("+");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				
-				try{
-					int num1,num2,ans;
-					num1=Integer.parseInt(t1.getText());
-					num2=Integer.parseInt(t2.getText());
-					ans=num1+num2;
-					t3.setText(Integer.toString(ans));
-					
-				}
-				catch(Exception e1){
-					JOptionPane.showMessageDialog(null,"Enter Valid Number");
-					
-				}
-				
-				
-			}
-		});
-		btnNewButton.setBounds(10, 130, 89, 50);
-		contentPane.add(btnNewButton);
+		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.RIGHT);
+		textField.setBounds(62, 32, 372, 96);
+		contentPane.add(textField);
+		textField.setColumns(10);
 		
-		JButton btnNewButton_1 = new JButton("-");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				try{
-					int num1,num2,ans;
-					num1=Integer.parseInt(t1.getText());
-					num2=Integer.parseInt(t2.getText());
-					ans=num1-num2;
-					t3.setText(Integer.toString(ans));
-					
-				}
-				catch(Exception e1){
-					JOptionPane.showMessageDialog(null,"Enter Valid Number");
-					
-				}
-			}
-		});
-		btnNewButton_1.setBounds(120, 130, 89, 50);
-		contentPane.add(btnNewButton_1);
+		JButton btnC = new JButton("C");
+		btnC.setBackground(Color.WHITE);
+		btnC.setForeground(Color.BLACK);
+		btnC.setBounds(141, 139, 49, 31);
+		contentPane.add(btnC);
 		
-		JButton btnNewButton_2 = new JButton("*");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				try{
-					int num1,num2,ans;
-					num1=Integer.parseInt(t1.getText());
-					num2=Integer.parseInt(t2.getText());
-					ans=num1*num2;
-					t3.setText(Integer.toString(ans));
-					
-				}
-				catch(Exception e1){
-					JOptionPane.showMessageDialog(null,"Enter Valid Number");
-					
-				}
-			}
-		});
-		btnNewButton_2.setBounds(225, 130, 89, 50);
-		contentPane.add(btnNewButton_2);
+		JButton button_15 = new JButton("7");
+		button_15.setBackground(Color.WHITE);
+		button_15.setForeground(Color.BLACK);
+		button_15.setBounds(141, 181, 49, 31);
+		contentPane.add(button_15);
 		
-		JButton btnNewButton_3 = new JButton("/");
-		btnNewButton_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				try{
-					int num1,num2,ans;
-					num1=Integer.parseInt(t1.getText());
-					num2=Integer.parseInt(t2.getText());
-					ans=num1/num2;
-					t3.setText(Integer.toString(ans));
-					
-				}
-				catch(Exception e1){
-					JOptionPane.showMessageDialog(null,"Enter Valid Number");
-					
-				}
-			}
-		});
-		btnNewButton_3.setBounds(335, 130, 89, 50);
-		contentPane.add(btnNewButton_3);
+		JButton button_16 = new JButton("4");
+		button_16.setBackground(Color.WHITE);
+		button_16.setForeground(Color.BLACK);
+		button_16.setBounds(141, 223, 49, 31);
+		contentPane.add(button_16);
 		
-		t2 = new JTextField();
-		t2.setHorizontalAlignment(SwingConstants.CENTER);
-		t2.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		t2.setBounds(225, 68, 70, 39);
-		contentPane.add(t2);
-		t2.setColumns(10);
+		JButton button_17 = new JButton("1");
+		button_17.setBackground(Color.WHITE);
+		button_17.setForeground(Color.BLACK);
+		button_17.setBounds(141, 265, 49, 31);
+		contentPane.add(button_17);
 		
-		t3 = new JTextField();
-		t3.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		t3.setHorizontalAlignment(SwingConstants.CENTER);
-		t3.setBounds(228, 213, 86, 39);
-		contentPane.add(t3);
-		t3.setColumns(10);
+		JButton button_18 = new JButton("+/-");
+		button_18.setBackground(Color.WHITE);
+		button_18.setForeground(Color.BLACK);
+		button_18.setBounds(141, 307, 49, 31);
+		contentPane.add(button_18);
 		
-		JLabel lblAnswer = new JLabel("Your Answer is");
-		lblAnswer.setFont(new Font("Arno Pro Caption", Font.PLAIN, 16));
-		lblAnswer.setBounds(91, 220, 118, 27);
-		contentPane.add(lblAnswer);
+		JButton button_1 = new JButton("( )");
+		button_1.setBackground(Color.WHITE);
+		button_1.setForeground(Color.BLACK);
+		button_1.setBounds(226, 139, 49, 31);
+		contentPane.add(button_1);
 		
-		JLabel lblSimpleCalculator = new JLabel("SIMPLE CALCULATOR");
-		lblSimpleCalculator.setFont(new Font("Times New Roman", Font.BOLD, 18));
-		lblSimpleCalculator.setBounds(120, 0, 266, 46);
-		contentPane.add(lblSimpleCalculator);
+		JButton button_2 = new JButton("8");
+		button_2.setBackground(Color.WHITE);
+		button_2.setForeground(Color.BLACK);
+		button_2.setBounds(226, 181, 49, 31);
+		contentPane.add(button_2);
+		
+		JButton button_3 = new JButton("5");
+		button_3.setBackground(Color.WHITE);
+		button_3.setForeground(Color.BLACK);
+		button_3.setBounds(226, 223, 49, 31);
+		contentPane.add(button_3);
+		
+		JButton button_4 = new JButton("2");
+		button_4.setBackground(Color.WHITE);
+		button_4.setForeground(Color.BLACK);
+		button_4.setBounds(226, 265, 49, 31);
+		contentPane.add(button_4);
+		
+		JButton button_5 = new JButton("0");
+		button_5.setBackground(Color.WHITE);
+		button_5.setForeground(Color.BLACK);
+		button_5.setBounds(226, 307, 49, 31);
+		contentPane.add(button_5);
+		
+		JButton button_6 = new JButton("%");
+		button_6.setBackground(Color.WHITE);
+		button_6.setForeground(Color.BLACK);
+		button_6.setBounds(309, 139, 49, 31);
+		contentPane.add(button_6);
+		
+		JButton button_7 = new JButton("9");
+		button_7.setBackground(Color.WHITE);
+		button_7.setForeground(Color.BLACK);
+		button_7.setBounds(309, 181, 49, 31);
+		contentPane.add(button_7);
+		
+		JButton button_8 = new JButton("6");
+		button_8.setBackground(Color.WHITE);
+		button_8.setForeground(Color.BLACK);
+		button_8.setBounds(309, 223, 49, 31);
+		contentPane.add(button_8);
+		
+		JButton button_9 = new JButton("3");
+		button_9.setBackground(Color.WHITE);
+		button_9.setForeground(Color.BLACK);
+		button_9.setBounds(309, 265, 49, 31);
+		contentPane.add(button_9);
+		
+		JButton button_10 = new JButton(".");
+		button_10.setBackground(Color.WHITE);
+		button_10.setForeground(Color.BLACK);
+		button_10.setBounds(309, 307, 49, 31);
+		contentPane.add(button_10);
+		
+		JButton button_11 = new JButton("/");
+		button_11.setBackground(Color.WHITE);
+		button_11.setForeground(Color.BLACK);
+		button_11.setBounds(385, 139, 49, 31);
+		contentPane.add(button_11);
+		
+		JButton button_12 = new JButton("*");
+		button_12.setBackground(Color.WHITE);
+		button_12.setForeground(Color.BLACK);
+		button_12.setBounds(385, 181, 49, 31);
+		contentPane.add(button_12);
+		
+		JButton button_13 = new JButton("-");
+		button_13.setBackground(Color.WHITE);
+		button_13.setForeground(Color.BLACK);
+		button_13.setBounds(385, 223, 49, 31);
+		contentPane.add(button_13);
+		
+		JButton button_14 = new JButton("+");
+		button_14.setBackground(Color.WHITE);
+		button_14.setForeground(Color.BLACK);
+		button_14.setBounds(385, 265, 49, 31);
+		contentPane.add(button_14);
+		
+		JButton button_19 = new JButton("=");
+		button_19.setBackground(Color.WHITE);
+		button_19.setForeground(Color.BLACK);
+		button_19.setBounds(385, 307, 49, 31);
+		contentPane.add(button_19);
 	}
 }
