@@ -24,7 +24,7 @@ import javax.swing.JMenuItem;
 public class cal extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField txtdisplay;
 
 	/**
 	 * Launch the application.
@@ -71,7 +71,7 @@ public class cal extends JFrame {
 		JButton button_15 = new JButton("7");
 		button_15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+7);
+				txtdisplay.setText(txtdisplay.getText()+7);
 			}
 		});
 		button_15.setBackground(Color.WHITE);
@@ -82,7 +82,7 @@ public class cal extends JFrame {
 		JButton button_16 = new JButton("4");
 		button_16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+4);
+				txtdisplay.setText(txtdisplay.getText()+4);
 			}
 		});
 		button_16.setBackground(Color.WHITE);
@@ -93,7 +93,7 @@ public class cal extends JFrame {
 		JButton button_17 = new JButton("1");
 		button_17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+1);
+				txtdisplay.setText(txtdisplay.getText()+1);
 			}
 		});
 		button_17.setBackground(Color.WHITE);
@@ -110,7 +110,7 @@ public class cal extends JFrame {
 		JButton button_1 = new JButton("( )");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+"(");
+				txtdisplay.setText(txtdisplay.getText()+"(");
 				
 			}
 		});
@@ -122,7 +122,7 @@ public class cal extends JFrame {
 		JButton button_2 = new JButton("8");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+8);
+				txtdisplay.setText(txtdisplay.getText()+8);
 			}
 		});
 		button_2.setBackground(Color.WHITE);
@@ -133,7 +133,7 @@ public class cal extends JFrame {
 		JButton button_3 = new JButton("5");
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+5);
+				txtdisplay.setText(txtdisplay.getText()+5);
 			}
 		});
 		button_3.setBackground(Color.WHITE);
@@ -144,7 +144,7 @@ public class cal extends JFrame {
 		JButton button_4 = new JButton("2");
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+2);
+				txtdisplay.setText(txtdisplay.getText()+2);
 			}
 		});
 		button_4.setBackground(Color.WHITE);
@@ -155,7 +155,7 @@ public class cal extends JFrame {
 		JButton button_5 = new JButton("0");
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textField.setText(textField.getText()+0);
+				txtdisplay.setText(txtdisplay.getText()+0);
 			}
 		});
 		button_5.setBackground(Color.WHITE);
@@ -166,7 +166,7 @@ public class cal extends JFrame {
 		JButton button_6 = new JButton("%");
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+"%");
+				txtdisplay.setText(txtdisplay.getText()+"%");
 			}
 		});
 		button_6.setBackground(Color.WHITE);
@@ -177,7 +177,7 @@ public class cal extends JFrame {
 		JButton button_7 = new JButton("9");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+9);
+				txtdisplay.setText(txtdisplay.getText()+9);
 			}
 		});
 		button_7.setBackground(Color.WHITE);
@@ -188,7 +188,7 @@ public class cal extends JFrame {
 		JButton button_8 = new JButton("6");
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+6);
+				txtdisplay.setText(txtdisplay.getText()+6);
 			}
 		});
 		button_8.setBackground(Color.WHITE);
@@ -199,7 +199,7 @@ public class cal extends JFrame {
 		JButton button_9 = new JButton("3");
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+3);
+				txtdisplay.setText(txtdisplay.getText()+3);
 			}
 		});
 		button_9.setBackground(Color.WHITE);
@@ -210,7 +210,7 @@ public class cal extends JFrame {
 		JButton button_10 = new JButton(".");
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+".");
+				txtdisplay.setText(txtdisplay.getText()+".");
 			}
 		});
 		button_10.setBackground(Color.WHITE);
@@ -221,7 +221,7 @@ public class cal extends JFrame {
 		JButton button_11 = new JButton("/");
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+"/");
+				txtdisplay.setText(txtdisplay.getText()+"/");
 			}
 		});
 		button_11.setBackground(Color.WHITE);
@@ -232,7 +232,7 @@ public class cal extends JFrame {
 		JButton button_12 = new JButton("X");
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+"x");
+				txtdisplay.setText(txtdisplay.getText()+"x");
 			}
 		});
 		button_12.setBackground(Color.WHITE);
@@ -243,7 +243,7 @@ public class cal extends JFrame {
 		JButton button_13 = new JButton("-");
 		button_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+"-");
+				txtdisplay.setText(txtdisplay.getText()+"-");
 			}
 		});
 		button_13.setBackground(Color.WHITE);
@@ -254,7 +254,7 @@ public class cal extends JFrame {
 		JButton button_14 = new JButton("+");
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+"+");
+				txtdisplay.setText(txtdisplay.getText()+"+");
 			}
 		});
 		button_14.setBackground(Color.WHITE);
@@ -265,7 +265,7 @@ public class cal extends JFrame {
 		JButton button_19 = new JButton("=");
 		button_19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.setText(textField.getText()+"=");
+				txtdisplay.setText(txtdisplay.getText()+"=");
 			}
 		});
 		button_19.setBackground(Color.WHITE);
@@ -284,24 +284,41 @@ public class cal extends JFrame {
 		JMenuItem mntmStanderd = new JMenuItem("Standard");
 		mntmStanderd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				setTitle("Standard Calculator");
+				setBounds(100, 100, 272, 374);
+				txtdisplay.setBounds(10, 11, 243, 37);
 			}
 		});
 		mnNewMenu.add(mntmStanderd);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Scientific");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				setTitle("Scientific Calculator");
+				setBounds(100, 100, 540, 374);
+				txtdisplay.setBounds(10, 11, 494, 37);
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Unit Converter");
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				setTitle("Unit Converter");
+				setBounds(100, 100, 750, 374);
+				txtdisplay.setBounds(10, 11, 494, 37);
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem_1);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Exit");
 		mnNewMenu.add(mntmNewMenuItem_2);
 		
-		textField = new JTextField();
-		textField.setHorizontalAlignment(SwingConstants.RIGHT);
-		textField.setFont(new Font("Times New Roman", Font.PLAIN, 18));
-		textField.setBounds(10, 42, 226, 54);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtdisplay = new JTextField();
+		txtdisplay.setHorizontalAlignment(SwingConstants.RIGHT);
+		txtdisplay.setFont(new Font("Times New Roman", Font.PLAIN, 18));
+		txtdisplay.setBounds(10, 52, 226, 54);
+		contentPane.add(txtdisplay);
+		txtdisplay.setColumns(10);
 	}
 }
