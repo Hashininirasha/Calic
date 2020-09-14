@@ -230,7 +230,9 @@ public class cal extends JFrame {
 		JButton button_11 = new JButton("\u00B1");
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=ops*(-1);
+				txtdisplay.setText(String.valueOf(ops));
 			}
 		});
 		button_11.setBackground(Color.WHITE);
@@ -347,6 +349,9 @@ public class cal extends JFrame {
 		JButton btnSin = new JButton("sin");
 		btnSin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.sin(ops);
+				txtdisplay.setText(String.valueOf(ops));
 			}
 		});
 		btnSin.setForeground(Color.BLACK);
@@ -373,12 +378,26 @@ public class cal extends JFrame {
 		contentPane.add(btnx_1);
 		
 		JButton button_23 = new JButton("\u221A");
+		button_23.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.sqrt(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		button_23.setForeground(Color.BLACK);
 		button_23.setBackground(Color.WHITE);
 		button_23.setBounds(293, 254, 69, 31);
 		contentPane.add(button_23);
 		
 		JButton btnCos = new JButton("cos");
+		btnCos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.cos(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnCos.setForeground(Color.BLACK);
 		btnCos.setBackground(Color.WHITE);
 		btnCos.setBounds(360, 86, 69, 31);
@@ -403,6 +422,13 @@ public class cal extends JFrame {
 		contentPane.add(btnx);
 		
 		JButton btnLog_3 = new JButton("log");
+		btnLog_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.log(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnLog_3.setForeground(Color.BLACK);
 		btnLog_3.setBackground(Color.WHITE);
 		btnLog_3.setBounds(360, 254, 69, 31);
@@ -443,6 +469,13 @@ public class cal extends JFrame {
 		contentPane.add(btnLn_1);
 		
 		JButton btnSinh = new JButton("sinh");
+		btnSinh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.sinh(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnSinh.setForeground(Color.BLACK);
 		btnSinh.setBackground(Color.WHITE);
 		btnSinh.setBounds(494, 86, 69, 31);
