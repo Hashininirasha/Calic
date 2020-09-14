@@ -443,6 +443,18 @@ public class cal extends JFrame {
 		contentPane.add(button_25);
 		
 		JButton btnBack = new JButton("\u2190");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String backspace=null;
+				if (txtdisplay.getText().length()>0){
+					StringBuilder strB=new StringBuilder(txtdisplay.getText());
+					strB.deleteCharAt(txtdisplay.getText().length()-1);
+					backspace=strB.toString();
+					txtdisplay.setText(backspace);
+				}
+				
+			}
+		});
 		btnBack.setForeground(Color.BLACK);
 		btnBack.setBackground(Color.WHITE);
 		btnBack.setBounds(220, 86, 54, 31);
