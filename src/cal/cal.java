@@ -27,6 +27,11 @@ public class cal extends JFrame {
 	private JTextField txtdisplay;
 	private JTextField JtxtConverter;
 	private JTextField JlblConverter;
+	double fnum;
+	
+	
+	String ope;
+	String ans;
 	
 	
 
@@ -165,7 +170,9 @@ public class cal extends JFrame {
 		JButton button_6 = new JButton("%");
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+"%");
+				fnum=Double.parseDouble(txtdisplay.getText());
+				txtdisplay.setText(" ");
+				ope="%";
 			}
 		});
 		button_6.setBackground(Color.WHITE);
@@ -234,7 +241,9 @@ public class cal extends JFrame {
 		JButton button_12 = new JButton("*");
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+"*");
+				fnum=Double.parseDouble(txtdisplay.getText());
+				txtdisplay.setText(" ");
+				ope="*";
 			}
 		});
 		button_12.setBackground(Color.WHITE);
@@ -245,7 +254,10 @@ public class cal extends JFrame {
 		JButton button_13 = new JButton("-");
 		button_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+"-");
+				fnum=Double.parseDouble(txtdisplay.getText());
+				txtdisplay.setText(" ");
+				ope="-";
+				
 			}
 		});
 		button_13.setBackground(Color.WHITE);
@@ -256,7 +268,9 @@ public class cal extends JFrame {
 		JButton button_14 = new JButton("+");
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+"+");
+				fnum=Double.parseDouble(txtdisplay.getText());
+				txtdisplay.setText(" ");
+				ope="+";
 			}
 		});
 		button_14.setBackground(Color.WHITE);
@@ -267,7 +281,9 @@ public class cal extends JFrame {
 		JButton button_19 = new JButton("/");
 		button_19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+"/");
+				fnum=Double.parseDouble(txtdisplay.getText());
+				txtdisplay.setText(" ");
+				ope="/";
 			}
 		});
 		button_19.setBackground(Color.WHITE);
