@@ -25,6 +25,10 @@ public class cal extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtdisplay;
+	private JTextField JtxtConverter;
+	private JTextField JlblConverter;
+	
+	
 
 	/**
 	 * Launch the application.
@@ -62,38 +66,41 @@ public class cal extends JFrame {
 		btnC.setBounds(28, 86, 49, 31);
 		contentPane.add(btnC);
 		
-		JButton button_15 = new JButton("7");
-		button_15.addActionListener(new ActionListener() {
+		JButton btn7 = new JButton("7");
+		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+7);
+				String num=txtdisplay.getText()+btn7.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_15.setBackground(Color.WHITE);
-		button_15.setForeground(Color.BLACK);
-		button_15.setBounds(28, 128, 49, 31);
-		contentPane.add(button_15);
+		btn7.setBackground(Color.WHITE);
+		btn7.setForeground(Color.BLACK);
+		btn7.setBounds(28, 128, 49, 31);
+		contentPane.add(btn7);
 		
-		JButton button_16 = new JButton("4");
-		button_16.addActionListener(new ActionListener() {
+		JButton btn4 = new JButton("4");
+		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+4);
+				String num=txtdisplay.getText()+btn4.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_16.setBackground(Color.WHITE);
-		button_16.setForeground(Color.BLACK);
-		button_16.setBounds(28, 170, 49, 31);
-		contentPane.add(button_16);
+		btn4.setBackground(Color.WHITE);
+		btn4.setForeground(Color.BLACK);
+		btn4.setBounds(28, 170, 49, 31);
+		contentPane.add(btn4);
 		
-		JButton button_17 = new JButton("1");
-		button_17.addActionListener(new ActionListener() {
+		JButton btn1 = new JButton("1");
+		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+1);
+				String num=txtdisplay.getText()+btn1.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_17.setBackground(Color.WHITE);
-		button_17.setForeground(Color.BLACK);
-		button_17.setBounds(28, 212, 49, 31);
-		contentPane.add(button_17);
+		btn1.setBackground(Color.WHITE);
+		btn1.setForeground(Color.BLACK);
+		btn1.setBounds(28, 212, 49, 31);
+		contentPane.add(btn1);
 		
 		JButton btnCe = new JButton("CE");
 		btnCe.addActionListener(new ActionListener() {
@@ -107,49 +114,53 @@ public class cal extends JFrame {
 		btnCe.setBounds(76, 86, 49, 31);
 		contentPane.add(btnCe);
 		
-		JButton button_2 = new JButton("8");
-		button_2.addActionListener(new ActionListener() {
+		JButton btn8 = new JButton("8");
+		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+8);
+				String num=txtdisplay.getText()+btn8.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_2.setBackground(Color.WHITE);
-		button_2.setForeground(Color.BLACK);
-		button_2.setBounds(76, 128, 49, 31);
-		contentPane.add(button_2);
+		btn8.setBackground(Color.WHITE);
+		btn8.setForeground(Color.BLACK);
+		btn8.setBounds(76, 128, 49, 31);
+		contentPane.add(btn8);
 		
-		JButton button_3 = new JButton("5");
-		button_3.addActionListener(new ActionListener() {
+		JButton btn5 = new JButton("5");
+		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+5);
+				String num=txtdisplay.getText()+btn5.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_3.setBackground(Color.WHITE);
-		button_3.setForeground(Color.BLACK);
-		button_3.setBounds(76, 170, 49, 31);
-		contentPane.add(button_3);
+		btn5.setBackground(Color.WHITE);
+		btn5.setForeground(Color.BLACK);
+		btn5.setBounds(76, 170, 49, 31);
+		contentPane.add(btn5);
 		
-		JButton button_4 = new JButton("2");
-		button_4.addActionListener(new ActionListener() {
+		JButton btn2 = new JButton("2");
+		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+2);
+				String num=txtdisplay.getText()+btn2.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_4.setBackground(Color.WHITE);
-		button_4.setForeground(Color.BLACK);
-		button_4.setBounds(76, 212, 49, 31);
-		contentPane.add(button_4);
+		btn2.setBackground(Color.WHITE);
+		btn2.setForeground(Color.BLACK);
+		btn2.setBounds(76, 212, 49, 31);
+		contentPane.add(btn2);
 		
-		JButton button_5 = new JButton("0");
-		button_5.addActionListener(new ActionListener() {
+		JButton btn0 = new JButton("0");
+		btn0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				txtdisplay.setText(txtdisplay.getText()+0);
+				String num=txtdisplay.getText()+btn0.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_5.setBackground(Color.WHITE);
-		button_5.setForeground(Color.BLACK);
-		button_5.setBounds(28, 254, 97, 31);
-		contentPane.add(button_5);
+		btn0.setBackground(Color.WHITE);
+		btn0.setForeground(Color.BLACK);
+		btn0.setBounds(28, 254, 97, 31);
+		contentPane.add(btn0);
 		
 		JButton button_6 = new JButton("%");
 		button_6.addActionListener(new ActionListener() {
@@ -162,38 +173,41 @@ public class cal extends JFrame {
 		button_6.setBounds(124, 86, 49, 31);
 		contentPane.add(button_6);
 		
-		JButton button_7 = new JButton("9");
-		button_7.addActionListener(new ActionListener() {
+		JButton btn9 = new JButton("9");
+		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+9);
+				String num=txtdisplay.getText()+btn9.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_7.setBackground(Color.WHITE);
-		button_7.setForeground(Color.BLACK);
-		button_7.setBounds(124, 128, 49, 31);
-		contentPane.add(button_7);
+		btn9.setBackground(Color.WHITE);
+		btn9.setForeground(Color.BLACK);
+		btn9.setBounds(124, 128, 49, 31);
+		contentPane.add(btn9);
 		
-		JButton button_8 = new JButton("6");
-		button_8.addActionListener(new ActionListener() {
+		JButton btn6 = new JButton("6");
+		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+6);
+				String num=txtdisplay.getText()+btn6.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_8.setBackground(Color.WHITE);
-		button_8.setForeground(Color.BLACK);
-		button_8.setBounds(124, 170, 49, 31);
-		contentPane.add(button_8);
+		btn6.setBackground(Color.WHITE);
+		btn6.setForeground(Color.BLACK);
+		btn6.setBounds(124, 170, 49, 31);
+		contentPane.add(btn6);
 		
-		JButton button_9 = new JButton("3");
-		button_9.addActionListener(new ActionListener() {
+		JButton btn3 = new JButton("3");
+		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				txtdisplay.setText(txtdisplay.getText()+3);
+				String num=txtdisplay.getText()+btn3.getText();
+				txtdisplay.setText(num);
 			}
 		});
-		button_9.setBackground(Color.WHITE);
-		button_9.setForeground(Color.BLACK);
-		button_9.setBounds(124, 212, 49, 31);
-		contentPane.add(button_9);
+		btn3.setBackground(Color.WHITE);
+		btn3.setForeground(Color.BLACK);
+		btn3.setBounds(124, 212, 49, 31);
+		contentPane.add(btn3);
 		
 		JButton button_10 = new JButton(".");
 		button_10.addActionListener(new ActionListener() {
