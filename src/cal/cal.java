@@ -435,6 +435,13 @@ public class cal extends JFrame {
 		contentPane.add(btnLog_3);
 		
 		JButton btnTan = new JButton("tan");
+		btnTan.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.tan(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnTan.setForeground(Color.BLACK);
 		btnTan.setBackground(Color.WHITE);
 		btnTan.setBounds(427, 86, 69, 31);
@@ -482,12 +489,26 @@ public class cal extends JFrame {
 		contentPane.add(btnSinh);
 		
 		JButton btnCosh = new JButton("cosh");
+		btnCosh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.cosh(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnCosh.setForeground(Color.BLACK);
 		btnCosh.setBackground(Color.WHITE);
 		btnCosh.setBounds(494, 128, 69, 31);
 		contentPane.add(btnCosh);
 		
 		JButton btnTanh = new JButton("tanh");
+		btnTanh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.tanh(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnTanh.setForeground(Color.BLACK);
 		btnTanh.setBackground(Color.WHITE);
 		btnTanh.setBounds(494, 170, 69, 31);
