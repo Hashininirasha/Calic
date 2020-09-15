@@ -276,9 +276,12 @@ public class cal extends JFrame {
 		JButton button_14 = new JButton("+");
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				System.out.println("+");
 				fnum=Double.parseDouble(txtdisplay.getText());
-				txtdisplay.setText("");
+				txtdisplay.setText(" ");
 				ope="+";
+				
+				
 			}
 		});
 		button_14.setBackground(Color.WHITE);
