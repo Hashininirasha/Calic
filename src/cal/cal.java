@@ -28,7 +28,8 @@ public class cal extends JFrame {
 	private JTextField JtxtConverter;
 	private JTextField JlblConverter;
 	double fnum;
-	
+	double snum;
+	double result;
 	
 	String ope;
 	String ans;
@@ -57,7 +58,7 @@ public class cal extends JFrame {
 	public cal() {
 		setTitle("Scientific Calculator");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 714, 333);
+		setBounds(100, 100, 742, 333);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setForeground(Color.BLACK);
@@ -66,6 +67,11 @@ public class cal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnC = new JButton("C");
+		btnC.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				txtdisplay.setText(" ");
+			}
+		});
 		btnC.setBackground(Color.WHITE);
 		btnC.setForeground(Color.BLACK);
 		btnC.setBounds(28, 86, 49, 31);
@@ -271,7 +277,7 @@ public class cal extends JFrame {
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				fnum=Double.parseDouble(txtdisplay.getText());
-				txtdisplay.setText(" ");
+				txtdisplay.setText("");
 				ope="+";
 			}
 		});
@@ -366,6 +372,13 @@ public class cal extends JFrame {
 		contentPane.add(btnSin_1);
 		
 		JButton btnXy = new JButton("x^y");
+		btnXy.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.pow(ops,ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnXy.setForeground(Color.BLACK);
 		btnXy.setBackground(Color.WHITE);
 		btnXy.setBounds(293, 170, 69, 31);
@@ -410,6 +423,13 @@ public class cal extends JFrame {
 		contentPane.add(btnCos_1);
 		
 		JButton btnX = new JButton("x^2");
+		btnX.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=(ops*ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnX.setForeground(Color.BLACK);
 		btnX.setBackground(Color.WHITE);
 		btnX.setBounds(360, 170, 69, 31);
@@ -470,6 +490,13 @@ public class cal extends JFrame {
 		contentPane.add(btnLog_1);
 		
 		JButton btnLn_1 = new JButton("ln");
+		btnLn_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.log10(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnLn_1.setForeground(Color.BLACK);
 		btnLn_1.setBackground(Color.WHITE);
 		btnLn_1.setBounds(427, 254, 69, 31);
@@ -521,6 +548,13 @@ public class cal extends JFrame {
 		contentPane.add(btnX_1);
 		
 		JButton button_25 = new JButton("\u03C0");
+		button_25.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops;
+					ops=(3.141592653589793238);
+					txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		button_25.setForeground(Color.BLACK);
 		button_25.setBackground(Color.WHITE);
 		button_25.setBounds(494, 254, 69, 31);
@@ -559,7 +593,14 @@ public class cal extends JFrame {
 		JButton button_24 = new JButton("=");
 		button_24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				txtdisplay.setText(txtdisplay.getText()+"=");
+				String ans;
+				snum=Double.parseDouble(txtdisplay.getText());
+				if(ope=="+"){
+					result=fnum+snum;
+					ans=String.format("%.2f", result);
+					txtdisplay.setText(ans);
+				}
+				
 			}
 		});
 		button_24.setForeground(Color.BLACK);
