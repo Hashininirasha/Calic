@@ -369,6 +369,14 @@ public class cal extends JFrame {
 		contentPane.add(btnSin);
 		
 		JButton btnSin_1 = new JButton("Sin-1");
+		btnSin_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.asin(ops);
+				txtdisplay.setText(String.valueOf(ops));
+				
+			}
+		});
 		btnSin_1.setForeground(Color.BLACK);
 		btnSin_1.setBackground(Color.WHITE);
 		btnSin_1.setBounds(293, 128, 69, 31);
@@ -420,6 +428,13 @@ public class cal extends JFrame {
 		contentPane.add(btnCos);
 		
 		JButton btnCos_1 = new JButton("cos-1");
+		btnCos_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.acos(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnCos_1.setForeground(Color.BLACK);
 		btnCos_1.setBackground(Color.WHITE);
 		btnCos_1.setBounds(360, 128, 69, 31);
@@ -473,6 +488,9 @@ public class cal extends JFrame {
 		JButton btnTan_1 = new JButton("tan-1");
 		btnTan_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.atan(ops);
+				txtdisplay.setText(String.valueOf(ops));
 			}
 		});
 		btnTan_1.setForeground(Color.BLACK);
@@ -588,6 +606,14 @@ public class cal extends JFrame {
 		contentPane.add(button_20);
 		
 		JButton btnx_2 = new JButton("1/x");
+		btnx_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				fnum=Double.parseDouble(txtdisplay.getText());
+				txtdisplay.setText(" ");
+				ope="1/x";
+				
+			}
+		});
 		btnx_2.setForeground(Color.BLACK);
 		btnx_2.setBackground(Color.WHITE);
 		btnx_2.setBounds(220, 170, 54, 31);
@@ -624,6 +650,12 @@ public class cal extends JFrame {
 					ans=String.format("%.2f", result);
 					txtdisplay.setText(ans);
 				}
+				else if(ope=="1/x"){
+					result=1/fnum;
+					ans=String.format("%.2f", result);
+					txtdisplay.setText(ans);
+				}
+				
 			}
 				
 		});
