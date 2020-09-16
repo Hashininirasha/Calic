@@ -395,7 +395,15 @@ public class cal extends JFrame {
 		btnXy.setBounds(293, 170, 69, 31);
 		contentPane.add(btnXy);
 		
-		JButton btnx_1 = new JButton("2^x");
+		JButton btnx_1 = new JButton("Rud");
+		btnx_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.round(ops);
+				txtdisplay.setText(String.valueOf(ops));
+				
+			}
+		});
 		btnx_1.setForeground(Color.BLACK);
 		btnx_1.setBackground(Color.WHITE);
 		btnx_1.setBounds(293, 212, 69, 31);
@@ -454,6 +462,13 @@ public class cal extends JFrame {
 		contentPane.add(btnX);
 		
 		JButton btnx = new JButton("|x|");
+		btnx.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.abs(ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnx.setForeground(Color.BLACK);
 		btnx.setBackground(Color.WHITE);
 		btnx.setBounds(360, 212, 69, 31);
@@ -499,12 +514,26 @@ public class cal extends JFrame {
 		contentPane.add(btnTan_1);
 		
 		JButton btnEx = new JButton("e");
+		btnEx.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double ops;
+				ops=(2.7182818285);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnEx.setForeground(Color.BLACK);
 		btnEx.setBackground(Color.WHITE);
 		btnEx.setBounds(427, 170, 69, 31);
 		contentPane.add(btnEx);
 		
 		JButton btnLog_1 = new JButton("e^x");
+		btnLog_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=(2.7182818285*ops);
+				txtdisplay.setText(String.valueOf(ops));
+			}
+		});
 		btnLog_1.setForeground(Color.BLACK);
 		btnLog_1.setBackground(Color.WHITE);
 		btnLog_1.setBounds(427, 212, 69, 31);
@@ -563,6 +592,14 @@ public class cal extends JFrame {
 		contentPane.add(btnTanh);
 		
 		JButton btnX_1 = new JButton("x!");
+		btnX_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				fnum=Double.parseDouble(txtdisplay.getText());
+				txtdisplay.setText(" ");
+				ope="!";
+			}
+		});
 		btnX_1.setForeground(Color.BLACK);
 		btnX_1.setBackground(Color.WHITE);
 		btnX_1.setBounds(494, 212, 69, 31);
@@ -623,7 +660,9 @@ public class cal extends JFrame {
 		button_24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String ans;
+				fnum=Double.parseDouble(txtdisplay.getText());
 				snum=Double.parseDouble(txtdisplay.getText());
+				
 				if(ope=="+"){
 					result=fnum+snum;
 					ans=String.format("%.2f", result);
@@ -655,6 +694,14 @@ public class cal extends JFrame {
 					ans=String.format("%.2f", result);
 					txtdisplay.setText(ans);
 				}
+				else if(ope=="!"){
+				for(double i=1;i<=fnum;i++){    
+				      result=result*i;    
+				  }    
+				ans=String.format("%.2f", result);
+				txtdisplay.setText(ans);
+				
+			}
 				
 			}
 				
