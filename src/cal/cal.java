@@ -117,7 +117,7 @@ public class cal extends JFrame {
 		btnCe.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
+				txtdisplay.setText(" ");
 			}
 		});
 		btnCe.setBackground(Color.WHITE);
@@ -409,18 +409,19 @@ public class cal extends JFrame {
 		btnx_1.setBounds(293, 212, 69, 31);
 		contentPane.add(btnx_1);
 		
-		JButton button_23 = new JButton("\u221A");
-		button_23.addActionListener(new ActionListener() {
+		JButton btnHypot = new JButton("Hypot");
+		btnHypot.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
-				ops=Math.sqrt(ops);
+				ops=Math.hypot(ops, ops);
 				txtdisplay.setText(String.valueOf(ops));
+				
 			}
 		});
-		button_23.setForeground(Color.BLACK);
-		button_23.setBackground(Color.WHITE);
-		button_23.setBounds(293, 254, 69, 31);
-		contentPane.add(button_23);
+		btnHypot.setForeground(Color.BLACK);
+		btnHypot.setBackground(Color.WHITE);
+		btnHypot.setBounds(293, 254, 69, 31);
+		contentPane.add(btnHypot);
 		
 		JButton btnCos = new JButton("cos");
 		btnCos.addActionListener(new ActionListener() {
@@ -636,7 +637,15 @@ public class cal extends JFrame {
 		btnBack.setBounds(220, 86, 54, 31);
 		contentPane.add(btnBack);
 		
-		JButton button_20 = new JButton("( )");
+		JButton button_20 = new JButton("\u221A");
+		button_20.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				ops=Math.sqrt(ops);
+				txtdisplay.setText(String.valueOf(ops));
+				
+			}
+		});
 		button_20.setForeground(Color.BLACK);
 		button_20.setBackground(Color.WHITE);
 		button_20.setBounds(220, 128, 54, 31);
@@ -660,7 +669,7 @@ public class cal extends JFrame {
 		button_24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String ans;
-				fnum=Double.parseDouble(txtdisplay.getText());
+				//fnum=Double.parseDouble(txtdisplay.getText());
 				snum=Double.parseDouble(txtdisplay.getText());
 				
 				if(ope=="+"){
@@ -690,7 +699,7 @@ public class cal extends JFrame {
 					txtdisplay.setText(ans);
 				}
 				else if(ope=="1/x"){
-					result=1/fnum;
+					result=1/snum;
 					ans=String.format("%.2f", result);
 					txtdisplay.setText(ans);
 				}
