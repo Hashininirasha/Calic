@@ -276,7 +276,7 @@ public class cal extends JFrame {
 		JButton button_14 = new JButton("+");
 		button_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("+");
+				
 				fnum=Double.parseDouble(txtdisplay.getText());
 				txtdisplay.setText(" ");
 				ope="+";
@@ -603,8 +603,29 @@ public class cal extends JFrame {
 					ans=String.format("%.2f", result);
 					txtdisplay.setText(ans);
 				}
+				else if(ope=="-"){
+						result=fnum-snum;
+						ans=String.format("%.2f", result);
+						txtdisplay.setText(ans);	
 				
+				}
+				else if(ope=="*"){
+					result=fnum*snum;
+					ans=String.format("%.2f", result);
+					txtdisplay.setText(ans);
+				}
+				else if(ope=="/"){
+					result=fnum/snum;
+					ans=String.format("%.2f", result);
+					txtdisplay.setText(ans);
+				}
+				else if(ope=="%"){
+					result=fnum%snum;
+					ans=String.format("%.2f", result);
+					txtdisplay.setText(ans);
+				}
 			}
+				
 		});
 		button_24.setForeground(Color.BLACK);
 		button_24.setBackground(Color.WHITE);
