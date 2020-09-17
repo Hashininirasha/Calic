@@ -21,6 +21,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JFormattedTextField;
+import javax.swing.JLayeredPane;
 
 public class cal extends JFrame {
 
@@ -34,6 +35,7 @@ public class cal extends JFrame {
 	
 	String ope;
 	String ans;
+	private JTextField textField;
 	
 	
 
@@ -59,7 +61,7 @@ public class cal extends JFrame {
 	public cal() {
 		setTitle("Scientific Calculator");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 297, 336);
+		setBounds(100, 100, 868, 336);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setForeground(Color.BLACK);
@@ -731,6 +733,10 @@ public class cal extends JFrame {
 		menuBar_1.add(mnNewMenu_1);
 		
 		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Mass");
+		mntmNewMenuItem_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		mnNewMenu_1.add(mntmNewMenuItem_3);
 		
 		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Length");
@@ -744,5 +750,24 @@ public class cal extends JFrame {
 		
 		JMenuItem mntmNewMenuItem_7 = new JMenuItem("Time");
 		mnNewMenu_1.add(mntmNewMenuItem_7);
+		
+		JLayeredPane layeredPane = new JLayeredPane();
+		layeredPane.setBounds(529, 32, 313, 253);
+		contentPane.add(layeredPane);
+		
+		textField = new JTextField();
+		textField.setBounds(183, 32, 120, 20);
+		layeredPane.add(textField);
+		textField.setColumns(10);
+		
+		JMenuBar menuBar_2 = new JMenuBar();
+		menuBar_2.setBounds(57, 31, 97, 21);
+		layeredPane.add(menuBar_2);
+		
+		JMenu mnNewMenu_2 = new JMenu("Kilogrammes (kg)");
+		menuBar_2.add(mnNewMenu_2);
+		
+		JMenuItem mntmNewMenuItem_8 = new JMenuItem("Grams (g)");
+		mnNewMenu_2.add(mntmNewMenuItem_8);
 	}
 }
