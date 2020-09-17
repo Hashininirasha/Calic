@@ -20,6 +20,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JFormattedTextField;
 
 public class cal extends JFrame {
 
@@ -58,7 +59,7 @@ public class cal extends JFrame {
 	public cal() {
 		setTitle("Scientific Calculator");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 742, 333);
+		setBounds(100, 100, 297, 336);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setForeground(Color.BLACK);
@@ -385,9 +386,11 @@ public class cal extends JFrame {
 		JButton btnXy = new JButton("x^y");
 		btnXy.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
-				ops=Math.pow(ops,ops);
-				txtdisplay.setText(String.valueOf(ops));
+				double ops1=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				double ops2=Double.parseDouble(String.valueOf(txtdisplay.getText()));
+				double ops3;
+				ops3=Math.pow(ops1, ops2);
+				txtdisplay.setText(String.valueOf(ops3));
 			}
 		});
 		btnXy.setForeground(Color.BLACK);
@@ -409,11 +412,11 @@ public class cal extends JFrame {
 		btnx_1.setBounds(293, 212, 69, 31);
 		contentPane.add(btnx_1);
 		
-		JButton btnHypot = new JButton("Hypot");
+		JButton btnHypot = new JButton("2*\u03C0");
 		btnHypot.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				double ops=Double.parseDouble(String.valueOf(txtdisplay.getText()));
-				ops=Math.hypot(ops, ops);
+				double ops;
+				ops=2*(3.141592653589793238);
 				txtdisplay.setText(String.valueOf(ops));
 				
 			}
@@ -719,5 +722,27 @@ public class cal extends JFrame {
 		button_24.setBackground(Color.WHITE);
 		button_24.setBounds(220, 212, 54, 73);
 		contentPane.add(button_24);
+		
+		JMenuBar menuBar_1 = new JMenuBar();
+		menuBar_1.setBounds(578, 0, 97, 21);
+		contentPane.add(menuBar_1);
+		
+		JMenu mnNewMenu_1 = new JMenu("Unit Converter");
+		menuBar_1.add(mnNewMenu_1);
+		
+		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Mass");
+		mnNewMenu_1.add(mntmNewMenuItem_3);
+		
+		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Length");
+		mnNewMenu_1.add(mntmNewMenuItem_4);
+		
+		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Temprature");
+		mnNewMenu_1.add(mntmNewMenuItem_5);
+		
+		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Speed");
+		mnNewMenu_1.add(mntmNewMenuItem_6);
+		
+		JMenuItem mntmNewMenuItem_7 = new JMenuItem("Time");
+		mnNewMenu_1.add(mntmNewMenuItem_7);
 	}
 }
