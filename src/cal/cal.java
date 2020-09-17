@@ -22,6 +22,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLayeredPane;
+import javax.swing.JList;
+import javax.swing.JComboBox;
 
 public class cal extends JFrame {
 
@@ -36,6 +38,7 @@ public class cal extends JFrame {
 	String ope;
 	String ans;
 	private JTextField textField;
+	private JTextField textField_1;
 	
 	
 
@@ -337,7 +340,7 @@ public class cal extends JFrame {
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				setTitle("Unit Converter");
-				setBounds(100, 100, 800, 374);
+				setBounds(100, 100, 850, 374);
 				txtdisplay.setBounds(32, 11, 500, 54);
 			}
 		});
@@ -760,14 +763,35 @@ public class cal extends JFrame {
 		layeredPane.add(textField);
 		textField.setColumns(10);
 		
-		JMenuBar menuBar_2 = new JMenuBar();
-		menuBar_2.setBounds(57, 31, 97, 21);
-		layeredPane.add(menuBar_2);
+		JComboBox comboBox = new JComboBox();
+		comboBox.addItem("Kilogrammes (kg)");
+		comboBox.addItem("Grames (kg)");
+		comboBox.setSelectedItem(null);
+		comboBox.setBounds(67, 32, 101, 20);
+		layeredPane.add(comboBox);
 		
-		JMenu mnNewMenu_2 = new JMenu("Kilogrammes (kg)");
-		menuBar_2.add(mnNewMenu_2);
+		JButton OK = new JButton("OK");
+		OK.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String value=(String)comboBox.getSelectedItem();
+				textField.setText(value);
+				
+			}
+		});
+		OK.setBounds(122, 205, 89, 23);
+		layeredPane.add(OK);
 		
-		JMenuItem mntmNewMenuItem_8 = new JMenuItem("Grams (g)");
-		mnNewMenu_2.add(mntmNewMenuItem_8);
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.addItem("Kilogrammes (kg)");
+		comboBox_1.addItem("Grames (kg)");
+		comboBox_1.setSelectedItem(null);
+		comboBox_1.setBounds(67, 104, 101, 20);
+		layeredPane.add(comboBox_1);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		
+		textField_1.setBounds(183, 104, 120, 20);
+		layeredPane.add(textField_1);
 	}
 }
