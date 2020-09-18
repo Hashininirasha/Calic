@@ -10,3 +10,6 @@ This Calculator has 3 menus..
   
  ![Screenshot (94)](https://user-images.githubusercontent.com/52965775/93567700-af5cb100-f9ac-11ea-8891-ef22e6a43aab.png)
  
+ Click on file menu add you can select a what calculator you want
+ 
+ 
