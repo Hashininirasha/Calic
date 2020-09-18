@@ -10,9 +10,19 @@ This Calculator has 3 menus..
   
  ![Screenshot (94)](https://user-images.githubusercontent.com/52965775/93567700-af5cb100-f9ac-11ea-8891-ef22e6a43aab.png)
  
- Click on file menu add you can select a what calculator you want
+ Click on file menu and you can select a what calculator you want
  
  ![Screenshot (96)](https://user-images.githubusercontent.com/52965775/93567926-0bbfd080-f9ad-11ea-859e-fcef1eb50a76.png)
 
- 
+for example if you want add two numbers ;
+  first you enter your first number
+  then click on addition button (+)
+  after you can select your second number
+  finally click on equal button (=)
+  
+  
+ if you want get a sin(90)
+  first press 90 and then press on sin button
+  
+  
  
