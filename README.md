@@ -12,4 +12,7 @@ This Calculator has 3 menus..
  
  Click on file menu add you can select a what calculator you want
  
+ ![Screenshot (96)](https://user-images.githubusercontent.com/52965775/93567926-0bbfd080-f9ad-11ea-859e-fcef1eb50a76.png)
+
+ 
  
