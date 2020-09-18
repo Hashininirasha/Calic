@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -14,6 +15,7 @@ import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
@@ -37,8 +39,7 @@ public class cal extends JFrame {
 	
 	String ope;
 	String ans;
-	private JTextField textField;
-	private JTextField textField_1;
+	double kilo=1000;
 	
 	
 
@@ -64,7 +65,7 @@ public class cal extends JFrame {
 	public cal() {
 		setTitle("Scientific Calculator");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 868, 336);
+		setBounds(100, 100, 301, 360);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setForeground(Color.BLACK);
@@ -79,7 +80,7 @@ public class cal extends JFrame {
 			}
 		});
 		btnC.setBackground(Color.WHITE);
-		btnC.setForeground(Color.BLACK);
+		btnC.setForeground(Color.RED);
 		btnC.setBounds(28, 86, 49, 31);
 		contentPane.add(btnC);
 		
@@ -330,21 +331,11 @@ public class cal extends JFrame {
 		mntmNewMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				setTitle("Scientific Calculator");
-				setBounds(100, 100, 600, 374);
+				setBounds(100, 100, 740, 374);
 				txtdisplay.setBounds(32, 11, 450, 54);
 			}
 		});
 		mnNewMenu.add(mntmNewMenuItem);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Unit Converter");
-		mntmNewMenuItem_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				setTitle("Unit Converter");
-				setBounds(100, 100, 850, 374);
-				txtdisplay.setBounds(32, 11, 500, 54);
-			}
-		});
-		mnNewMenu.add(mntmNewMenuItem_1);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Exit");
 		mntmNewMenuItem_2.addActionListener(new ActionListener() {
@@ -728,70 +719,11 @@ public class cal extends JFrame {
 		button_24.setBounds(220, 212, 54, 73);
 		contentPane.add(button_24);
 		
-		JMenuBar menuBar_1 = new JMenuBar();
-		menuBar_1.setBounds(578, 0, 97, 21);
-		contentPane.add(menuBar_1);
-		
-		JMenu mnNewMenu_1 = new JMenu("Unit Converter");
-		menuBar_1.add(mnNewMenu_1);
-		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Mass");
-		mntmNewMenuItem_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		mnNewMenu_1.add(mntmNewMenuItem_3);
-		
-		JMenuItem mntmNewMenuItem_4 = new JMenuItem("Length");
-		mnNewMenu_1.add(mntmNewMenuItem_4);
-		
-		JMenuItem mntmNewMenuItem_5 = new JMenuItem("Temprature");
-		mnNewMenu_1.add(mntmNewMenuItem_5);
-		
-		JMenuItem mntmNewMenuItem_6 = new JMenuItem("Speed");
-		mnNewMenu_1.add(mntmNewMenuItem_6);
-		
-		JMenuItem mntmNewMenuItem_7 = new JMenuItem("Time");
-		mnNewMenu_1.add(mntmNewMenuItem_7);
-		
-		JLayeredPane layeredPane = new JLayeredPane();
-		layeredPane.setBounds(529, 32, 313, 253);
-		contentPane.add(layeredPane);
-		
-		textField = new JTextField();
-		textField.setBounds(183, 32, 120, 20);
-		layeredPane.add(textField);
-		textField.setColumns(10);
-		
-		JComboBox comboBox = new JComboBox();
-		comboBox.addItem("Kilogrammes (kg)");
-		comboBox.addItem("Grames (kg)");
-		comboBox.setSelectedItem(null);
-		comboBox.setBounds(67, 32, 101, 20);
-		layeredPane.add(comboBox);
-		
-		JButton OK = new JButton("OK");
-		OK.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				String value=(String)comboBox.getSelectedItem();
-				textField.setText(value);
-				
-			}
-		});
-		OK.setBounds(122, 205, 89, 23);
-		layeredPane.add(OK);
-		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.addItem("Kilogrammes (kg)");
-		comboBox_1.addItem("Grames (kg)");
-		comboBox_1.setSelectedItem(null);
-		comboBox_1.setBounds(67, 104, 101, 20);
-		layeredPane.add(comboBox_1);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		
-		textField_1.setBounds(183, 104, 120, 20);
-		layeredPane.add(textField_1);
+		JLabel lblNewLabel = new JLabel("");
+		Image img=new ImageIcon(this.getClass().getResource("/calculator-clipart-child-1.png")).getImage();
+		lblNewLabel.setIcon(new ImageIcon(img));
+		lblNewLabel.setBounds(476, 0, 251, 430);
+		contentPane.add(lblNewLabel);
 	}
 }
+
